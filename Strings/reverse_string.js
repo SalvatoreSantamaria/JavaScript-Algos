@@ -17,8 +17,6 @@ var reverseString = function(s) {
 
 // You may assume all the characters consist of printable ascii characters.
 
- 
-
 // Example 1:
 
 // Input: ["h","e","l","l","o"]
@@ -27,3 +25,15 @@ var reverseString = function(s) {
 
 // Input: ["H","a","n","n","a","h"]
 // Output: ["h","a","n","n","a","H"]
+
+// also
+
+function reverse(str) {
+  let result = '';
+  for (let i of str) { //use this syntax of a for loop
+    result = i + result;
+  }
+  debugger;
+  return result;
+}
+reverse('qwerty')
