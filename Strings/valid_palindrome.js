@@ -3,15 +3,15 @@ var isPalindrome = function(str) {
   let result = []
   let reverse = []
   let alphabet = '0123456789abcdefghijklmnopqrstuvwxyz'
-  let number = '0123456789'
+
   for (let i of arr) {
     if (alphabet.includes(i.toLowerCase())) {
-      result.push(i.toLowerCase())
-      reverse.push(i.toLowerCase())
+      result.push(i)
     }
   }
-  return(result.join('') == reverse.reverse().join(''))
+  return(result.join('') == result.reverse().join(''))
 };
+
 
 // Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
 
