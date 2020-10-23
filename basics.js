@@ -17,14 +17,31 @@ function chunk(array, size) {
   return result;
 }
 
-// loop thru Object
 
-// loop thru Array
+// recursion console.log arr values
+function recursive(arr, i = 0) {
+  if (i >= arr.length) {   // recursive functions must have a guard, or stopping point!
+    console.log("End of loop");
+    return;
+  }
+  console.log("Recursive " + arr[i]); // log the place in the array
+  recursive(arr, i + 1);
+}
 
-// loop thru String 
+// recursion console.log through object // really hard to for loop through because you don't know how deep it goes
+function treeRecursive(tree) {
+  if (tree.children.length === 0) {   //if tree has no children in it, then return. this is the guard clause.
+    return;
+  }
+  //forEach child of the tree
+  tree.children.forEach((child) => {
+    console.log("treeRecursive " + child.name); //print out name
+    treeRecursive(child); //then pass in child to see if it has any children
+  });
+}
 
-// recursion
 
+const negativeTest = x < 0 ? -1 : 1;
 
 // while loop
 let i = 0
