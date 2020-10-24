@@ -1,9 +1,33 @@
-// add patterns
+add patterns?
+.each
+arrow functions
 
 //arr = ["Banana", "Orange", "Lemon", "Apple", "Mango"] 
-slice: returns copy. arr.slice(1, 3) = "Orange", "Lemon" 
+//slice: returns copy. arr.slice(1, 3) = "Orange", "Lemon" 
 
-splice: adds/removes and returns the removed items. arr.splice(2, 0, "a", "b") = ["Banana", "Orange", "a", "b", "Lemon", "Apple", "Mango"] 
+//splice: adds/removes and returns the removed items. arr.splice(2, 0, "a", "b") = ["Banana", "Orange", "a", "b", "Lemon", "Apple", "Mango"] 
+
+//remove from an array
+const array = [2, 5, 9];
+const index = array.indexOf(5);
+if (index > -1) {
+  array.splice(index, 1);
+} //will remove 5 
+
+function removeItemAll(arr, value) {
+  var i = 0;
+  while (i < arr.length) {
+    if (arr[i] === value) {
+      arr.splice(i, 1);
+    } else {
+      ++i;
+    }
+  }
+  return arr;
+}
+
+// array = [2, 9]
+console.log(array); 
 
 //substrings and chunking
 function chunk(array, size) { 
@@ -16,7 +40,6 @@ function chunk(array, size) {
   console.log(result)
   return result;
 }
-
 
 // recursion console.log arr values
 function recursive(arr, i = 0) {
@@ -39,7 +62,6 @@ function treeRecursive(tree) {
     treeRecursive(child); //then pass in child to see if it has any children
   });
 }
-
 
 const negativeTest = x < 0 ? -1 : 1;
 
