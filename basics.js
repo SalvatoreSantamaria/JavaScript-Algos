@@ -82,9 +82,13 @@ let arr = string.split()
 [arr[0], arr[1]] = [arr[1], arr[0]];
 // arr is [2,1,3,4]
 // with temp
-var b = list[y];
-list[y] = list[x];
-list[x] = b;
+for (let i = 0; i < arr.length; i++) {
+  if (arr[i] > arr[i + 1]) { //this will move all the lowest nums to the front of an arr
+    var temp = arr[i];
+    arr[i] = arr[i + 1];
+    arr[i + 1] = temp;
+  }
+} 
 
 // sorting by length - smallest to largest
 arr.sort((a, b) => a.length - b.length)
