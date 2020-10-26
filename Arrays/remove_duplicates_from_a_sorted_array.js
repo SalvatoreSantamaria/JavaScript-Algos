@@ -23,7 +23,8 @@ var removeDuplicates = function(arr) {
       indexCounter++ //increment the index
     }
   }
-  console.log(arr)
+  console.log(arr) 
+  // if you want to actually delete the repeats at the end, let result = arr.splice(0, index)
   return indexCounter
 
 

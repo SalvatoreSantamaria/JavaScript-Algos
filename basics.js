@@ -63,7 +63,7 @@ function treeRecursive(tree) {
   });
 }
 
-const negativeTest = x < 0 ? -1 : 1;
+const negativeTest = x < 0 ? -1 : 1; //********************************************************************************************************** */
 
 // while loop
 let i = 0
