@@ -1,22 +1,32 @@
-var removeDuplicates = function(nums) {
-
-
+var removeDuplicates = function(arr) {
+  //old way with while loop
   //nums = [1,1,2,2,8,8]  
-    
-  let p1 = 0
-  let p2 = 0
-  
-  
-    //this algo just changes numbers inside of the array in order until we run out of arr length, and then just returns the index value
-    while (p2 < nums.length) {
-      if (nums[p2] !== nums[p2 - 1]) { //if current value does not equal previous value
-        nums[p1] = nums[p2] //set p1 to the value of current value of p2 (which is the number we want to keep)
-        p1 +=1 
-      }
-      p2 += 1
-     // console.log(' this is nums ' + nums + ' this is p1 ' + p1 + ' this is p2 ' + p2) 
+  // let p1 = 0
+  // let p2 = 0
+  //   //this algo just changes numbers inside of the array in order until we run out of arr length, and then just returns the index value
+  //   while (p2 < nums.length) {
+  //     if (nums[p2] !== nums[p2 - 1]) { //if current value does not equal previous value
+  //       nums[p1] = nums[p2] //set p1 to the value of current value of p2 (which is the number we want to keep)
+  //       p1 +=1 
+  //     }
+  //     p2 += 1
+  //    // console.log(' this is nums ' + nums + ' this is p1 ' + p1 + ' this is p2 ' + p2) 
+  //   }
+  //   return p1
+
+  //better way with for loop
+  let indexCounter = 0
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] != arr[i - 1]) { //if current value does not equal previous value 
+      arr[indexCounter] = arr[i] //set arr of index counter to arr[i]
+      indexCounter++ //increment the index
     }
-    return p1
+  }
+  console.log(arr)
+  return indexCounter
+
+
   };
 
 // Given a sorted array nums, remove the duplicates in-place such that each element appears only once and returns the new length.

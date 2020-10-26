@@ -1,6 +1,6 @@
-add patterns?
-.each
-arrow functions
+//substring: substring() method extracts the characters from a string, between two indices, and returns the new sub string.
+let str = "Hello world!";
+str.substring(1, 4); // return ell
 
 //arr = ["Banana", "Orange", "Lemon", "Apple", "Mango"] 
 //slice: returns copy. arr.slice(1, 3) = "Orange", "Lemon" 
@@ -11,7 +11,7 @@ arrow functions
 const array = [2, 5, 9];
 const index = array.indexOf(5);
 if (index > -1) {
-  array.splice(index, 1);
+  array.splice(index, 1); //also arr.splice(0,1) will return [5,9]
 } //will remove 5 
 
 function removeItemAll(arr, value) {
@@ -114,4 +114,17 @@ for (let i = 0; i < arr.length; i++) {
   }
 }
 
+// Arrow functions with callback
+const users = ['Kuma', 'Addie', 'Rae', 'Paxton']
+let nameLengths = users.map(x => {
+  return x.length
+}) // [4, 5, 3, 6]
 
+const multiple = (x, y) => {
+  console.log(x, y)
+}
+
+const array1 = [1, 4, 9, 16];
+/* .map */ array1.map(x => x * 2); // expected output: Array [2, 8, 18, 32]
+/* .forEach */ array1.forEach(element => console.log(element)); // 1 4 9 16
+/* .filter */ array1.filter(x => x > 5); // [9, 16];
