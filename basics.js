@@ -128,3 +128,9 @@ const array1 = [1, 4, 9, 16];
 /* .map */ array1.map(x => x * 2); // expected output: Array [2, 8, 18, 32]
 /* .forEach */ array1.forEach(element => console.log(element)); // 1 4 9 16
 /* .filter */ array1.filter(x => x > 5); // [9, 16];
+
+// filter (does not modify original array)
+const arr = [1,2,3,4,5,6]
+filteredArr = arr.filter(e => {
+  return (e % 2 == 0)  // only arr val that are div by 2 will be returned. filteredArr is now [2,4,6]
+}) 
