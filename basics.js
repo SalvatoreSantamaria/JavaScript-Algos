@@ -2,6 +2,8 @@
 let str = "Hello world!";
 str.substring(1, 4); // return ell
 
+//max/min array: const max = Math.max(...someArray) 
+
 //arr = ["Banana", "Orange", "Lemon", "Apple", "Mango"] 
 //slice: returns copy. arr.slice(1, 3) = "Orange", "Lemon" 
 
@@ -50,7 +52,7 @@ function recursive(arr, i = 0) {
   console.log("Recursive " + arr[i]); // log the place in the array
   recursive(arr, i + 1);
 }
-
+/********************************************************************************************* */
 // recursion console.log through object // really hard to for loop through because you don't know how deep it goes
 function treeRecursive(tree) {
   if (tree.children.length === 0) {   //if tree has no children in it, then return. this is the guard clause.
@@ -63,7 +65,7 @@ function treeRecursive(tree) {
   });
 }
 
-const negativeTest = x < 0 ? -1 : 1; //********************************************************************************************************** */
+const negativeTest = x < 0 ? -1 : 1; //
 
 // while loop
 let i = 0
