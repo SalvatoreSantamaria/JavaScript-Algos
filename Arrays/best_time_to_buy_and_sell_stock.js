@@ -21,8 +21,6 @@ var maxProfit = function(prices) {
 
     } //otherwise
     
-    
-
       else if ((prices[i] - buy) > profit) { // else find the different between the current lowest and the current index and see if they are greater than profit
         profit = prices[i] -buy
         console.log(profit)

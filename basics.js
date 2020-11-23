@@ -93,7 +93,7 @@ for (let i = 0; i < arr.length; i++) {
 } 
 
 // sorting by length - smallest to largest
-arr.sort((a, b) => a.length - b.length)
+arr.sort((a, b) => a.length - b.length) //arr.sort((a, b) => a - b)
 
 // make a hashmap
 let obj = {}
@@ -114,6 +114,10 @@ for (let i = 0; i < arr.length; i++) {
   } else {
     obj[arr[i]]++
   }
+}
+
+//search an object 
+if (x in obj) {
 }
 
 // Arrow functions with callback
